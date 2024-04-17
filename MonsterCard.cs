@@ -1,43 +1,45 @@
-﻿using System;
-using System.Linq;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.UI;
+[Sistem.Serializable]
 
 namespace GwentPro;
 
-public class MonsterCards
+public class MonsterCards : MonoBehaviour
 {
-	public int Power { get; set; }
-	public string Name { get; set; }
-	public string Faction { get; set; }
-	public TipeMonster Tipe{ get; set; }
+	public int Power;
+	public string Name;
+	public string Faction;
+	public TypeMonster Type;
+	public string CardDescription;
+	 
+	public int DrawXcards;
 
-	public void createCard(int power, string name, string faction , TipeMonster tipe)
+	public Sprite ThisImage;
+
+	public MonsterCards(int power, string name, string faction, TypeMonster type, string cardDescription, Sprite thisImag, int drawXcards)
 	{
 		Power = power;
 		Name = name;
 		Faction = faction;
-		Tipe = tipe;
+		Type = type;
+		CardDescription = cardDescription;
+		
+		DrawXcards = drawXcards;
+
+		ThisImage = thisImage;
 	}
-	
-	public bool isTipe(TipeMonster tipe)
+
+	public bool isType(TypeMonster type)
 	{
-	    return Tipe == tipe;
+		return Type == type;
 	}
 }
 
-public enum TipeMonster
+public enum TypeMonster
 {
-    Warrior,
+	Warrior,
 	Archer,
 	Support,
 }
-
-/*MonsterCards myCard = new MonsterCards(TipeMonster.Warrior);
-
-if (mycard.isTipe(TipeMonster.Warrior))
-{
-    //codigo si myCard es guerrero
-}*/
