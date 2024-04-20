@@ -12,29 +12,25 @@ public class Card : MonoBehaviour
 	public string Name;
 	public Faction faction;
 	public CardType Type;
-	public Rank 
+	public Rank rank;
 	public string CardDescription;
 	 
 	public int DrawXcards;
 
 	public Sprite ThisImage;
 
-	public Card(int power, string name, Faction c_faction, CardType type, string cardDescription, Sprite thisImag, int drawXcards)
+	public Card(int power, string name, Faction c_faction, CardType type,Rank _rank, string cardDescription, Sprite thisImag, int drawXcards)
 	{
 		Power = power;
 		Name = name;
 		faction = c_faction;
 		Type = type;
+		rank = _rank;
 		CardDescription = cardDescription;
 		
 		DrawXcards = drawXcards;
 
 		ThisImage = thisImage;
-	}
-
-	public bool isType(TypeMonster type)
-	{
-		return Type == type;
 	}
 }
 

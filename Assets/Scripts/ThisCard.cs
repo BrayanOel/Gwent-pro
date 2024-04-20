@@ -12,10 +12,11 @@ public class ThisCard : MonoBehaviour
 	public int thisID;
 	
 	public int Power;
-	public string Name;
-	public string Faction;
-	public TipeMonster Type;
-	public string CardDescription;
+		public string Name;
+		public Faction faction;
+		public CardType Type;
+		public Rank rank;
+		public string CardDescription;
 	
 	public Sprite ThisSprite;
 	public Image thatImage;
