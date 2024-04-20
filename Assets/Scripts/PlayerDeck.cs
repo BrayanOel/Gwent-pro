@@ -7,8 +7,8 @@ namespace GwentPro;
 
 public class PlayerDeck : MonoBehaviour
 {
-	private List<MonsterCards> deck = new List<MonsterCards>();
-	private List<MonsterCards> container = new List<MonsterCards>();
+	private List<Card> deck = new List<Card>();
+	private List<Card> container = new List<Card>();
 
 	public int x;
 	public int deckSize;

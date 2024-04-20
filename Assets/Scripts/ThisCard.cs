@@ -8,7 +8,7 @@ namespace GwentPro;
 
 public class ThisCard : MonoBehaviour
 {         
-    public List<MonsterCards> thisCard = new List<MonsterCards>();
+  public List<Card> thisCard = new List<Card>();
 	public int thisID;
 	
 	public int Power;
@@ -36,7 +36,7 @@ public class ThisCard : MonoBehaviour
 	
 	void start ()
 	{
-        thisCard [0] = CardDataBase.cardList[thisID]
+    thisCard [0] = CardDataBase.cardList[thisID]
 		numberOfCardsInDeck = PlayerDeck.deckSize;
 		
 		//drawX = 0;
